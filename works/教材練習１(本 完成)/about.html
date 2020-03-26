@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="robots" content="index,follow" />
+        <title>LOGGER about</title>
+        <meta name="description" content="説明文" />
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+      
+        <link rel="shortcut icon" href="img/enel.ico">
+        <link rel="apple-touch-icon-precomposed" href="画像のパス/apple-touch-icon-precomposed.png">
+      
+        <!-- 外部ファイルの読み込み -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/ab615bec84.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+        <script>
+            $(function(){
+                $(".headC").click(function(){
+                    $(".headB").slideToggle();
+                });
+            });
+        </script>
+      
+        <!-- スマホページのURLが異なる場合（PC側） -->
+        <link rel="alternate" media="only screen and (max-width: 640px)" href="スマホページのURL" />
+      
+        <!-- スマホページのURLが異なる場合（スマホ側） -->
+        <link rel="canonical" href="PCページのURL" />
+      
+        <!-- 必要あれば -->
+        <link rel="canonical" href="評価を統一したいページのURL" />
+      
+        <!-- 分割ページの場合 -->
+        <link rel="prev" href="前のページのURL">
+        <link rel="next" href="次のページのURL">
+      
+        <!-- facebookのOGPタグ -->
+        <meta property="og:site_name" content="サイト名" />
+        <meta property="og:url" content="ページURL" />
+        <meta property="og:type" content="ページタイプ" /> 
+        <meta property="og:title" content="ページタイトル" />
+        <meta property="og:description" content="ページ説明文"/>
+        <meta property="og:image" content="サムネイル画像URL" />
+        <meta property="fb:app_id" content="appIdを入力" />
+        <meta property="og:locale" content="ja_JP" />
+         
+        <!-- twitterのOGPタグ -->
+        <meta name="twitter:card" content="カードの種類" />
+        <meta name="twitter:site" content="@ユーザー名" />
+        <meta name="twitter:description" content="ページ説明文" />
+        <meta name="twitter:image:src" content="サムネイル画像URL" />
+      
+    </head>
+<body class="nohero">
+    <header class="head-fixed">
+        <div class="container">
+            <div class="container-small">
+                <a href="index.html" class="headA">LOGGER</a>
+                <button type="button" class="headC">
+                    <span><i class="fas fa-align-justify" title="menu"></i></span>
+                </button>
+            </div>          
+            <navi class="headB">
+                <ul>
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="contents.html">コンテンツ</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </navi>
+        </div>
+    </header>
+
+    <article class="post"> <!-- article は内容が単体で完結するセクションであることを示す際に使用します。 
+        　　　　　　　　　　　　　例えば、フォーラムでの投稿、雑誌や新聞の記事、ブログのエントリ、コメントなど -->
+        <div class="container">
+
+            <h1>LOGGERについて</h1>
+            
+            <p>LOGGERはライフログに関する情報の発信、アプリ開発、データ分析、ユーザーサポートを行うために設立された会社です。
+                ライフログのサービスやデータを活用することで、日々の生活を楽しみ、より良くしていくことを目指いしています。</p>
+
+            <p>近年はグローバルワールドネットワークとも連携し、国内のみならず、海外展開も含めて活動を広げております。</p>
+        </div>
+    </article>
+
+    <aside class="history"> <!-- aside はその部分がウェブページ内における余談・補足情報のセクションであることを示す際に使用-->
+        <div class="container">
+            <div class="photo"></div>
+            <div class="text">
+                <h2 id="history">History</h2>
+                <table>
+                    <tr>
+                        <th>2010年4月</th>
+                        <td>LOGGER設立</td>
+                    </tr>
+                    <tr>
+                        <th>2016年6月</th>
+                        <td>オンラインマガジン創刊</td>
+                    </tr>
+                    <tr>
+                        <th>2014年12月</th>
+                        <td>海外企業と連携してオンラインデータ共有事業をスタート</td>
+                    </tr>
+                    <tr>
+                        <th>2015年1月</th>
+                        <td>ライフログアプリをリリース</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </aside>
+
+    <footer>
+        <div class="container">
+            <div class="footA">
+                <h2>LOGGER</h2>
+                <p>
+                    〒155-0032 東京都世田谷区代沢2-33-9<br>
+                    <a href="http://logger.nett">http://logger.nett</a>
+                </p>
+
+                <navi class="footD">
+                    <ul>
+                        <li><a href="#"><span><i class="fab fa-twitter" title="twitter"></i></span></a></li>
+                        <li><a href="#"><span><i class="fab fa-facebook" title="facebook"></i></span></a></li>
+                        <li><a href="#"><span><i class="fab fa-google-plus" title="google plus"></i></span></a></li>
+                        <li><a href="#"><span><i class="fab fa-instagram" title="instagram"></i></span></a></li>
+                        <li><a href="#"><span><i class="fab fa-youtube-square" title="youtube"></i></span></a></li>
+                    </ul>
+                </navi>
+            </div>
+            <navi class="footB">
+                <div>
+                    <h3>ABOUT</h3>
+                    <ul>
+                        <li><a href="about.html#history">設立</a></li>
+                        <li><a href="contact.html#map">所在地</a></li>
+                        <li><a href="contact.html#map">地図</a></li>
+                        <li><a href="#">スタッフ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>SUPPORT</h3>
+                    <ul>
+                        <li><a href="#">ダウンロード</a></li>
+                        <li><a href="#">マニュアル</a></li>
+                        <li><a href="question.html">よくある質問</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>CONTENTS</h3>
+                    <ul>
+                        <li><a href="#">お知らせ</a></li>
+                        <li><a href="#">ビジネス</a></li>
+                        <li><a href="#">プロフィール</a></li>
+                        <li><a href="#">開発者</a></li>
+                        <li><a href="#">ブログ</a></li>
+                    </ul>
+                </div>
+            </navi>
+            <div class="footC">
+                © LOGGER corp. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

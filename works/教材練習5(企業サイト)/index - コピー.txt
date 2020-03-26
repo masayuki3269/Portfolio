@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="robots" content="index,follow" />
+        <title>Konomi Space -お好みのネットワーク・コミュニティ・スペースをあなたに-</title>
+        <meta name="description" content="konoMi Spaceはオリジナルなコミュニティ空間を構築するアプリ。無料で気の知れた仲間達とプライベートなSNS空間が構築できます。また、カスタマイズをすることによってビジネスに使用したり、企業とお客様をつなぐことができるブランディングアプリとして構築することも可能。" />
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+      
+        <link rel="shortcut icon" href="img/favicon.ico"> <!--👈ファビコン -->
+        <link rel="apple-touch-icon-precomposed" href="画像のパス/apple-touch-icon-precomposed.png"> <!--👈アプリのアイコン-->
+      
+        <!-- 外部ファイルの読み込み -->
+        <link rel="stylesheet" href="style.css">
+        <script src="ファイルの場所"></script>
+      
+        <!-- 外部からの引用フォントやアイコン -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/ab615bec84.js" crossorigin="anonymous"></script>
+      
+        <!-- スマホページのURLが異なる場合（PC側） -->
+        <link rel="alternate" media="only screen and (max-width: 640px)" href="スマホページのURL" />
+      
+        <!-- スマホページのURLが異なる場合（スマホ側） -->
+        <link rel="canonical" href="PCページのURL" />
+      
+        <!-- 必要あれば -->
+        <link rel="canonical" href="評価を統一したいページのURL" />
+      
+        <!-- 分割ページの場合 -->
+        <link rel="prev" href="前のページのURL">
+        <link rel="next" href="次のページのURL">
+      
+        <!-- facebookのOGPタグ -->
+        <meta property="og:site_name" content="サイト名" />
+        <meta property="og:url" content="ページURL" />
+        <meta property="og:type" content="ページタイプ" /> 
+        <meta property="og:title" content="ページタイトル" />
+        <meta property="og:description" content="ページ説明文"/>
+        <meta property="og:image" content="サムネイル画像URL" />
+        <meta property="fb:app_id" content="appIdを入力" />
+        <meta property="og:locale" content="ja_JP" />
+         
+        <!-- twitterのOGPタグ -->
+        <meta name="twitter:card" content="カードの種類" />
+        <meta name="twitter:site" content="@ユーザー名" />
+        <meta name="twitter:description" content="ページ説明文" />
+        <meta name="twitter:image:src" content="サムネイル画像URL" />
+      
+    </head>
+<body>
+    <header>
+
+        <div class="box">
+            <div class="header-A">
+                <a href="#"><h1 class="roboto">konoMi Space</h1></a>
+                <div class="link">
+                    <div class="lang-change">
+                        <a href="#">JP</a><span>/</span><a href="#">EN</a>
+                    </div>
+                    <a href="#">無料で始める</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-B">
+            <img class="main-img" src="img/header-iphone.png" alt="メイン画像">
+            <div class="tittle-container">
+                <h1 class="roboto">konoMi Space</h1>
+                <p>お好みのネットワーク・コミュニティ・スペースをあなたに</p>
+                <div class="banner">
+                    <a href="#"><img src="img/app-store.png" alt="app-storeのバナー"></a>
+                    <a href="#"><img src="img/google-play.png" alt="google-playのバナー"></a>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+
+    <section class="about">
+        <div class="container">
+
+            <div class="text-content">
+                <h2 class="tittle">About</h2>
+                <p class="text">konoMi Spaceであなた専用の新しいネットワークコミュニティ空間を作成し、友達や仕事仲間を招待しましょう。konoMi Spaceはメンバー間のコミュニケーションや情報・知識の共有と保管を支援する様々な機能を提供、あなたのコミュニティを活性化します。</p>
+            </div>
+
+            <div class="item-container">
+
+                <div class="item">
+                    <h3>伝達</h3>
+                    <p>Communication</p>
+                    <img src="img/overview_001.png" alt="アイテム画像">
+                </div>
+
+                <div class="item">
+                    <h3>対話</h3>
+                    <p>Dialogue</p>
+                    <img src="img/overview_002.png" alt="アイテム画像">
+                </div>
+
+                <div class="item">
+                    <h3>通知</h3>
+                    <p>Notification</p>
+                    <img src="img/overview_003.png" alt="アイテム画像">
+                </div>
+
+                <div class="item">
+                    <h3>知識共有</h3>
+                    <p>Knowledge Sharing</p>
+                    <img src="img/overview_004.png" alt="アイテム画像">
+                </div>
+
+                <div class="item">
+                    <h3>ライブラリ</h3>
+                    <p>Library</p>
+                    <img src="img/overview_005.png" alt="アイテム画像">
+                </div>
+
+                <div class="item">
+                    <h3>データベース</h3>
+                    <p>Database</p>
+                    <img src="img/overview_006.png" alt="アイテム画像">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="how-to">
+        <div class="container">
+
+            <div class="text-content">
+                <h2 class="tittle">使い方はあなた次第</h2>
+                <p class="text">konoMi Spaceは様々な「人の集い」に自由な「使い方」を提供します。</p>
+            </div>
+
+            <div class="item-container">
+
+                <a class="item" href="#">
+                    <h3>家族や友達と使う</h3>
+                    <p>プライバシーが保護された「スペース」で、スケジュールや思い出を共有しましょう。</p>
+                </a>
+                
+                <a class="item" href="#">
+                    <h3>家族や友達と使う</h3>
+                    <p>プライバシーが保護された「スペース」で、スケジュールや思い出を共有しましょう。</p>
+                </a>
+
+                <a class="item" href="#">
+                    <h3>家族や友達と使う</h3>
+                    <p>プライバシーが保護された「スペース」で、スケジュールや思い出を共有しましょう。</p>
+                </a>
+
+                <a class="item" href="#">
+                    <h3>家族や友達と使う</h3>
+                    <p>プライバシーが保護された「スペース」で、スケジュールや思い出を共有しましょう。</p>
+                </a>
+        
+            </div>
+
+            <a class="button" href="#">プランの料金についてはこちら</a>
+
+        </div>
+    </section>
+
+    <section class="discription-A">
+        <div class="container">
+
+            <div class="text-content">
+                <h2 class="tittle">konoMi Spaceの特徴</h2>
+                <p class="text">konoMi Spaceはコミュニティの活動と知識共有を支援する為、ユーザーコミュニケーションと情報管理を統合する新感覚アプリケーションです。</p>
+            </div>
+
+            <div class="item-container">
+
+                <div class="item">
+                    <h3>あなたの好みの「スペース」を作り上げましょう</h3>
+                    <ul>
+                        <li>あなた自身でメンバーが集うコミュニティ・スペースを作成することができます。</li>
+                        <li>スペースの名前・説明、カバーイメージ、テーマカラーを自由に設定し、あなた好みの「スペース」を演出してください。</li>
+                        <li>連絡先のメールアドレスを利用し、簡単な操作で「スペース」への招待メールを送信できます。</li>
+                        <li>スペース内に「グループ（サークル）」を作成し、様々な情報コンテンツを共有する範囲として利用する事ができます。</li>
+                    </ul>
+                </div>
+
+                <img src="img/feature-screen2.png" alt="イメージ画像">
+                
+            </div>
+
+        </div>
+    </section>
+
+    <section class="discription-B">
+        <div class="container">
+
+            <div class="item-container">
+
+                <div class="item">
+                    <h3>記事を作成してタイムラインへ投稿しましょう</h3>
+                    <ul>
+                        <li>テキストや画像、動画、添付ファイルを含んだ「記事」を作成し、タイムラインへ投稿できます。</li>
+                        <li>記事の共有範囲はスペース、グループ、メンバーで指定する事ができます。</li>
+                        <li>「重要な記事」として投稿すると、共有範囲に対し「お知らせ」がプッシュ通知されます。これにより、見逃しを防止、円滑なコミュニケーションを促進します。</li>
+                        <li>気に入った記事に対し「いいね」で反応を示すことができます。</li>
+                        <li>さらに「コメント」を追記する事で、タイムライン上で一つのテーマをもとにした多人数による「対話」を実現できます。</li>
+                    </ul>
+                </div>
+
+                <img src="img/feature-screen3.png" alt="イメージ画像">
+                
+            </div>
+
+        </div>
+    </section>
+
+    <section class="discription-C">
+        <div class="container">
+
+            <div class="item-container">
+
+                <div class="item">
+                    <h3>チャットによる親密で直接的なコミュニケーションをとりましょう</h3>
+                    <ul>
+                        <li>リアルタイムなコミュニケーションには「チャット」を利用してください。音声、ビデオによる会話も可能です。</li>
+                        <li>1:1でもグループでも。複数のチャットルームを作成して自由に会話が可能です。</li>
+                        <li>ビデオチャット、ボイスチャットもご利用できます。より親密で直接的なコミュニケーションをサポートします。</li>
+                    </ul>
+                </div>
+
+                <img src="img/feature-screen3.png" alt="イメージ画像">
+                
+            </div>
+
+        </div>
+    </section>
+
+    <section class="discription-D">
+        <div class="container">
+
+            <div class="item-container">
+
+                <div class="item">
+                    <h3>ライブラリで情報の管理と共有をしましょう</h3>
+                    <ul>
+                        <li>ライブラリの「マイフォルダ」へあなたの写真、動画、各種ファイルをアップロードしましょう。</li>
+                        <li>タイムラインでお気に入りの記事を見つけたら、いつでも読み返せるように「マイフォルダ」に保存しましょう。</li>
+                        <li>「マイフォルダ」の中にサブフォルダを自由に作成可能。重要なアイテムを整理整頓して保管するのに役立ちます。</li>
+                        <li>「マイフォルダ」内アイテムに共有範囲を設定する事で、メンバー間またはグループ内での安心・安全な情報共有を実現できます。</li>
+                    </ul>
+                </div>
+
+                <img src="img/feature-screen3.png" alt="イメージ画像">
+                
+            </div>
+
+        </div>
+    </section>
+
+    <section class="example">
+        <div class="container">
+
+            <div class="text-content">
+                <h2 class="tittle">活用事例</h2>
+                <p class="text">konoMi Spaceを実際に利用しているユーザー様のお声や業種別の活用事例を紹介しています。</p>
+            </div>
+
+            <div class="item-container">
+
+                <a class="item" href="#">
+                    <h3>株式会社エス・エイ・アイ</h3>
+                    <p>スノーボードスクールの受付業務、インストラクター管理業務で活用</p>
+                </a>
+                
+                <a class="item" href="#">
+                    <h3>滋賀医科大学同期会｜湖医会</h3>
+                    <p>卒業生、在校生を含めた交流を促進する会</p>
+                </a>
+        
+            </div>
+
+            <aside class="pdf-rinks">
+
+                <div class="rinks-container-a">
+
+                    <a class="rink" href="#">
+                        <p><i class="far fa-file-pdf"></i></p>
+                        <h3>ヘアサロンの活用事例</h3>
+                    </a>
+
+                    <a class="rink" href="#">
+                        <p><i class="far fa-file-pdf"></i></p>
+                        <h3>美容皮膚科の活用事例</h3>
+                    </a>
+
+                    <a class="rink" href="#">
+                        <p><i class="far fa-file-pdf"></i></p>
+                        <h3>ヨガスタジオの活用事例</h3>
+                    </a>
+                </div>
+
+                <div class="rinks-container-b">
+
+                    <a class="rink" href="#">
+                        <p><i class="far fa-file-pdf"></i></p>
+                        <h3>人材派遣業の活用事例</h3>
+                    </a>
+
+                    <a class="rink" href="#">
+                        <p><i class="far fa-file-pdf"></i></p>
+                        <h3>不動産賃貸営業の活用事例</h3>
+                    </a>
+
+                </div>
+
+            </aside>
+
+            <a class="button" href="#">プランの料金についてはこちら</a>
+
+        </div>
+    </section>
+
+    <section class="last">
+        <div class="text">
+            <h3>無料で使えます</h3>
+            <p>konoMi Spaceは無料でお使いいただけます。さっそくはじめてみましょう！</p>
+        </div>
+
+        <div class="banner">
+            <a href="#"><img src="img/app-store.png" alt="app-storeのバナー"></a>
+            <a href="#"><img src="img/google-play.png" alt="google-playのバナー"></a>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="logo">
+            <h1 class="roboto">konoMi Space</h1>
+            <img src="img/logo-ls.png" alt="ロゴ画像">
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#">プランと料金</a></li>
+                <span>|</span>
+
+                <li><a href="#">利用規約</a></li>
+                <span>|</span>
+                
+                <li><a href="#">プライバシーポリシー</a></li>
+                <span>|</span>
+
+                <li><a href="#">ご利用ガイド</a></li>
+                <span>|</span>
+
+                <li><a href="#">お問い合わせ</a></li>
+                
+            </ul>
+        </nav>
+
+        <p class="copyrights">Copyright © 2019 LittleSoft All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

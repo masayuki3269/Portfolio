@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="robots" content="index,follow" />
+        <title>LOGGER Top</title>
+        <meta name="description" content="説明文" />
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+      
+        <link rel="shortcut icon" href="img/enel.ico"> <!--👈ファビコン -->
+        <link rel="apple-touch-icon-precomposed" href="画像のパス/apple-touch-icon-precomposed.png"> <!--👈アプリのアイコン-->
+      
+        <!-- 外部ファイルの読み込み -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/ab615bec84.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+        <script>
+            $(function(){
+                $(".headC").click(function(){
+                    $(".headB").slideToggle();
+                });
+            });
+        </script>
+      
+        <!-- スマホページのURLが異なる場合（PC側） -->
+        <link rel="alternate" media="only screen and (max-width: 640px)" href="スマホページのURL" />
+      
+        <!-- スマホページのURLが異なる場合（スマホ側） -->
+        <link rel="canonical" href="PCページのURL" />
+      
+        <!-- 必要あれば -->
+        <link rel="canonical" href="評価を統一したいページのURL" />
+      
+        <!-- 分割ページの場合 -->
+        <link rel="prev" href="前のページのURL">
+        <link rel="next" href="次のページのURL">
+      
+        <!-- facebookのOGPタグ -->
+        <meta property="og:site_name" content="LOGGER" />
+        <meta property="og:url" content="ページURL" />
+        <meta property="og:type" content="article" /> 
+        <meta property="og:title" content="サンプルTOP" />
+        <meta property="og:description" content="LOGGERのトップページです。"/>
+        <meta property="og:image" content="サムネイル画像URL" />
+        <meta property="fb:app_id" content="appIdを入力" />
+        <meta property="og:locale" content="ja_JP" />
+         
+        <!-- twitterのOGPタグ -->
+        <meta name="twitter:card" content="カードの種類" />
+        <meta name="twitter:site" content="@ユーザー名" />
+        <meta name="twitter:description" content="ページ説明文" />
+        <meta name="twitter:image:src" content="サムネイル画像URL" />
+      
+    </head>
+<body>
+    <header class="head-color head-fixed">
+        <div class="container">
+            <div class="container-small">
+                <a href="index.html" class="headA">LOGGER</a>
+                <button type="button" class="headC">
+                    <span><i class="fas fa-align-justify" title="menu"></i></span>
+                </button>
+            </div>          
+            <navi class="headB">
+                <ul>
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="contents.html">コンテンツ</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </navi>
+        </div>
+    </header>
+
+    <section class="conA">
+        <div class="container">
+            <img src="img/logo.svg" alt="オシャレなロゴです。">
+            <h1>LOGGER</h1>
+            <p>美味しく楽しくライフログ</p>
+            <a href="#">ライフログを始める</a>
+        </div>
+    </section>
+
+    <section class="conB">
+        <div class="container">
+            <div class="text">
+                <i class="fas fa-dice-d6 icon"></i>
+                <h2>ライフログって何？</h2>
+                <p>日常のあれこれを記録していくライフログ。いろいろなものが見えてきます。</p>
+                <a href="#">more...<span><i class="fas fa-angle-right"></i></span></a>
+            </div>
+
+            <div class="text">
+                <i class="fas fa-apple-alt icon"></i>
+                <h2>必要なのはスマホだけ</h2>
+                <p>ライブログを始めるのに必要なのはスマホだけ。いつでもスタート出来ます。</p>
+                <a href="#">more...<span><i class="fas fa-angle-right"></i></span></a>
+            </div>
+
+            <div class="text">
+                <i class="fas fa-book-reader icon"></i>
+                <h2>SNSとの連携も簡単</h2>
+                <p>TwitterやFacebookといったSNSと連携して、簡単にログを共有することができます。</p>
+                <a href="#">more...<span><i class="fas fa-angle-right"></i></span></a>
+            </div>
+
+            <div class="text">
+                <i class="fas fa-dice-d6 icon"></i>
+                <h2>ライフログって何？</h2>
+                <p>日常のあれこれを記録していくライフログ。いろいろなものが見えてきます。</p>
+                <a href="#">more...<span><i class="fas fa-angle-right"></i></span></a>
+            </div>
+        </div> 
+    </section>
+
+    <section class="conC">
+        <div class="container">
+            <div class="photo"></div>
+            <div class="text">
+                <h2>面倒な設定やデータ管理は全部お任せ</h2>
+                <p>ライフログでつまづきがちな面倒な設定やデータ管理の煩わしさはありません。他のログアプリとの連携もワンクリックで完了です。</p>
+                <a href="#">詳しい設定方法を確認する<span><i class="fas fa-angle-right"></i></span></a>
+            </div>
+        </div>    
+    </section>
+
+    <section class="conD">
+        <div class="container">
+            <div class="photo"></div>
+            <div class="text">
+                <h2>ライフログで毎日の日常生活をもっと楽しむ</h2>
+                <p>ふと気が付くと蓄積しているライフログ。ログを見返すといろいろなことが見えてきて、なんてこともない日常も楽しくなってきます。</p>
+                <a href="list-C.html">例えばこんな楽しみい方が…<span><i class="fas fa-angle-right"></i></span></a>
+            </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footA">
+                <h2>LOGGER</h2>
+                <p>
+                    〒155-0032 東京都世田谷区代沢2-33-9<br>
+                    <a href="http://logger.nett">http://logger.nett</a>
+                </p>
+
+                <navi class="footD">
+                    <ul>
+                        <li><a href="#"><span><i class="fab fa-twitter" title="twitter"></i></span></a></li>
+                        <li><a href="#"><span><i class="fab fa-facebook" title="facebook"></i></span></a></li>
+                        <li><a href="#"><span><i class="fab fa-google-plus" title="google plus"></i></span></a></li>
+                        <li><a href="#"><span><i class="fab fa-instagram" title="instagram"></i></span></a></li>
+                        <li><a href="#"><span><i class="fab fa-youtube-square" title="youtube"></i></span></a></li>
+                    </ul>
+                </navi>
+            </div>
+            <navi class="footB">
+                <div>
+                    <h3>ABOUT</h3>
+                    <ul>
+                        <li><a href="about.html#history">設立</a></li>
+                        <li><a href="contact.html#map">所在地</a></li>
+                        <li><a href="contact.html#map">地図</a></li>
+                        <li><a href="#">スタッフ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>SUPPORT</h3>
+                    <ul>
+                        <li><a href="#">ダウンロード</a></li>
+                        <li><a href="#">マニュアル</a></li>
+                        <li><a href="question.html">よくある質問</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>CONTENTS</h3>
+                    <ul>
+                        <li><a href="#">お知らせ</a></li>
+                        <li><a href="#">ビジネス</a></li>
+                        <li><a href="#">プロフィール</a></li>
+                        <li><a href="#">開発者</a></li>
+                        <li><a href="#">ブログ</a></li>
+                    </ul>
+                </div>
+            </navi>
+            <div class="footC">
+                © LOGGER corp. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

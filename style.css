@@ -1,0 +1,580 @@
+@charset "utf-8";
+
+
+/*----------------- reset css -----------------*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+ margin:0;
+ padding:0;
+ border:0;
+ outline:0;
+ vertical-align:baseline;
+ background:transparent;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+ display:block;
+}
+
+ul, ol {
+ list-style:none;
+}
+
+blockquote, q {
+ quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+ content:'';
+ content:none;
+}
+
+a {
+ margin:0;
+ padding:0;
+ vertical-align:baseline;
+ text-decoration: none;
+ color: inherit;
+}
+
+/* change colours to suit your needs */
+ins {
+ background-color:#ff9;
+ color:#000;
+ text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+ background-color:#ff9;
+ color:#000;
+ font-style:italic;
+ font-weight:bold;
+}
+
+del {
+ text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+ border-bottom:1px dotted;
+ cursor:help;
+}
+
+table {
+ border-collapse:collapse;
+ border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+ display:block;
+ height:1px;
+ border:0;
+ border-top:1px solid #cccccc;
+ margin:1em 0;
+ padding:0;
+}
+
+input, select {
+ vertical-align:middle;
+}
+
+img {
+ vertical-align: bottom;
+ line-height: 1.0;
+}
+
+button {
+ line-height: 1.0;
+ background-color: transparent;
+ border: none;
+ cursor: pointer;
+ outline: none;
+ padding: 0;
+ appearance: none;
+}
+
+/*----------------- reset css -----------------*/
+
+
+
+
+
+
+
+
+:root{
+    --tittle-font-color-:rgb(95, 44, 3);
+    --title-font-family-:'Bellota Text', cursive;
+    --text-font-family-:'Noto Serif JP', serif;
+    --sub-text-color-: #fcda9d;
+    --main-color-:#ff9900;
+}
+
+.tittle-font{
+    font-family: var(--title-font-family-);
+    color: var(--tittle-font-color-);
+}
+
+.text-font{
+    font-family: var(--text-font-family-);
+    letter-spacing: 0.1em;
+    line-height: 1.8em;
+    font-weight: bold;
+}
+
+i{
+    color: #ffff8f;
+    text-shadow: 2px 2px #00000073;
+}
+
+@keyframes shake{
+    0%{
+        transform: rotate(15deg);
+    }
+
+    50%{
+        transform: rotate(0deg);
+        background-color: #00000013
+        ;
+    }
+
+    100%{
+        transform: rotate(-15deg);
+        background-color: #00000025;
+    }
+}
+
+#cursor-stalker {
+    /* 値を none に設定すると、要素がポインターイベントのターゲットではないことを示すのに加え、ポインターイベントが要素を「通過」して、
+       代わりに要素の「下」をターゲットにすることを指示します。 */
+    pointer-events: none; 
+
+    position: fixed;
+    z-index: 999;
+    top: -25px;     /*座標調節（カーソル位置と円の中心を合わせる）*/
+    left: -12px;    /*座標調節（カーソル位置と円の中心を合わせる）*/
+
+    background-image: url(img/note-transparent.png);
+    background-position: bottom;
+    background-size: cover;
+    width: 35px;   /*マウスストーカーの直径*/
+    height: 35px;  /*マウスストーカーの直径*/
+    
+    transform: translate(0,0);   /*任意の位置に要素を移動させる*/
+    /* jsでここに transform: translate( e.clientX px , e.clientY px ); が追加される*/
+
+    opacity: 1;
+    
+    transition: top, 0.5s, left 0.5s, width .5s, height .5s ,opacity .5s;  /*ちょっと遅れてついてくるように*/
+    transition-timing-function: ease-out;
+}
+
+.hover{
+    opacity: 0.4 !important;
+    top: -50px !important;    
+    left: -24px !important;   
+    width: 70px !important;
+    height: 70px !important;
+    transition: .5s !important;
+}
+
+
+
+/*----------------- header -----------------*/
+
+header{
+    background-color: #ffffff;
+    
+}
+
+header nav{
+    display: inline-block;
+}
+
+header h1{
+    font-size: 50px;
+    position: absolute;
+    z-index: 2;
+    padding: 30px 0 0 30px;
+    text-shadow: 5px 1px #00000056;
+}
+
+header .container{
+    position: fixed;
+    z-index: 100;
+    padding: 30px 0 0 30px;
+}
+
+header ul{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20vh;
+}
+
+header li{
+    flex: 1;
+    display: inline-block;
+    padding: 25px 0 25px 0;
+}
+
+header li a{
+    font-size: 20px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.384);
+    transition: 0.5s ease;
+}
+
+header li a:hover{
+    display: inline-block;
+
+    animation-name: shake;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+/*----------------- header -----------------*/
+
+
+
+
+/*----------------- main -----------------*/
+
+main{
+    background-image: url(img/main.png);
+    background-position: center;
+    background-size: cover;
+
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+}
+
+.main-message-container{
+    background-image: url(img/wood-bord_transparent_2.png);
+    background-position: center;
+    background-size: cover;
+    filter: drop-shadow(5px 5px 5px #000000);
+
+    position: absolute;
+    z-index: 2;
+    right: 180px;
+    top: 180px;
+
+    width: 70vw;
+    height: 60vh;
+    text-align: center;
+}
+
+main p{
+    font-family: var(--text-font-family-);
+    font-size: 40px;
+    color: #ffeecb;
+    text-shadow: 2px 2px #000000ad;
+
+   
+    padding-top: 20px;
+}
+
+.link-container nav{
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    padding: 0 60px 0 60px;
+}
+
+.link-container nav li{
+    flex: 1;
+    width: 80px;
+    height: 180px;
+    list-style: none;
+    background-color: #0000004f;
+
+    margin-right: 2px;
+}
+
+.link-container nav li a{
+    color: #ffeecb;
+    font-size: 20px;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.5s ease;
+}
+
+.link-container nav li a:hover{
+    background-color: #ffffff15;
+}
+
+/*----------------- main -----------------*/
+
+
+
+
+
+/*----------------- section.profile -----------------*/
+
+.profile{
+    background-image: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)),url(img/section-profile-background.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    text-shadow: 0.5px 0.5px #00000033;
+}
+
+.first-container{
+    width: 75%;
+    margin: 0 auto 0 auto;
+    padding: 100px 0 75px 0;
+}
+
+.first-container h2{
+    text-align: center;
+    border-bottom: 1px solid var(--main-color-);
+    width: 100%;
+    
+    margin-bottom: 50px;
+
+    font-size: 36px;
+}
+
+.first-container label{
+    cursor: pointer;
+}
+
+.first-container label:hover{
+    background-color: #00000023;
+}
+
+
+
+.first-container h2::after{
+    content: "<< Click !";
+    font-size: 0.5em;
+    color: var(--tittle-font-color-);
+    opacity: 0.4;
+    padding-left: 20px;
+}
+
+.content h3{
+    display: inline-block;
+    position: relative;
+    border-right: 3px ridge var(--main-color-);
+    border-left: 3px ridge var(--main-color-);
+    padding:0px 5px 0 5px;
+    margin-bottom: 10px;
+}
+
+.content h3::before{
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, var(--main-color-) 0%, var(--main-color-) 50%, transparent 50%, transparent 100%);
+
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    z-index: 1;
+}
+
+.content h3::after{
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, transparent 0%, transparent 50%, var(--main-color-) 50%, var(--main-color-) 100%);
+
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    z-index: 1;
+}
+
+
+.content{
+    margin: 40px 0;
+}
+
+.content .graph{
+    display: flex;
+}
+
+.graph li{
+    margin: 5px 0;
+}
+
+.graph ul:nth-child(2){
+    padding-left: 20px;
+}
+
+.switch{
+    display: none;
+    margin-left: 500px;
+}
+
+.for-switch-container{
+    padding: 0 30px;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.switch:not(:checked)+.for-switch-container{
+    height: 0;
+    opacity: 0;
+    
+}
+
+.switch:checked+.for-switch-container{
+    height: 100%;
+    opacity: 1;
+}
+
+/*----------------- section.profile -----------------*/
+
+
+
+
+
+
+
+/*----------------- section. work-introduction -----------------*/
+
+.work-introduction{
+    background-image: linear-gradient(rgba(255,153,0,0.7),rgba(255,153,0,0.7)),url(img/section-wark-introduce-background.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.work-introduction .first-container h2{
+    text-align: center;
+    border-bottom: 1px solid var(--tittle-font-color-);
+    width: 100%;
+    
+    margin-bottom: 50px;
+
+    font-size: 36px;
+}
+
+.work-introduction .content h3{
+    display: inline-block;
+    position: relative;
+    border-right: 3px ridge var(--tittle-font-color-);
+    border-left: 3px ridge var(--tittle-font-color-);
+    padding:5px 5px 0 5px;
+    margin-bottom: 10px;
+}
+
+.work-introduction .content h3::before{
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, var(--tittle-font-color-) 0%, var(--tittle-font-color-) 50%, transparent 50%, transparent 100%);
+
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    z-index: 1;
+}
+
+.work-introduction .content h3::after{
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, transparent 0%, transparent 50%, var(--tittle-font-color-) 50%, var(--tittle-font-color-) 100%);
+
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    z-index: 1;
+}
+
+iframe{
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.4);
+}
+
+aside h4{
+    display: inline-block;
+    background-color: #ffd04f;
+    border: 1px solid #ffff8f;
+    padding: 5px 10px 5px 10px;
+    margin-bottom: 5px;
+}
+
+.content p+iframe{
+    margin: 50px 0;
+}
+
+.for-switch-container .for-switch-small-container{
+    transition: all 0.5s;
+}
+
+.for-switch-small-container iframe:nth-child(2){
+    margin-bottom: 100px;
+}
+
+.switch+.for-switch-small-container,.smallest-container,.appeal-page{
+    
+    overflow: hidden;
+}
+
+
+.switch:not(:checked)+.for-switch-small-container,.smallest-container,.appeal-page{
+    height: 0px;
+    opacity: 0;
+    
+}
+
+.switch:checked+.for-switch-small-container,.smallest-container,.appeal-page{
+    height: 100%;
+    opacity: 1;
+}
+
+.work-introduction .content{
+    margin-bottom: 50px;
+}
+
+.work-introduction a{
+    opacity: 0.6;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.work-introduction a:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
+
+
+
+
+
+/*----------------- section. work-introduction -----------------*/

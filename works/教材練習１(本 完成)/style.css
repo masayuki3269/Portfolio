@@ -1,0 +1,1305 @@
+@charset "utf-8";
+
+:root{
+    --main-color:#5D9AB2; /*　← 変数。決まった色に名前つけといて呼び出せるようにする*/
+    --accent-color: #BF6A7A;
+    --dark-color: #2b5566;
+    --text-bright-color: #ffffff;
+    --icon-color: #ffffff;
+    --icon-BK-color: #dddddd;
+    --large-width: 1000px;
+}
+
+body{
+    margin: 0;
+    font-family: 'メイリオ',
+                 'hiragino kaku Gothic Pro',
+                 sans-serif;
+    font-size: 16px; /* root で画面サイズ別にコンテンツページの基本文字サイズを決めたのだが */
+                     /* 他の部分にもコードが反応してしまうため、ここで 16px を指定しておく */
+}
+
+/*-------------header------------*/
+    header{
+        position: absolute;  /*別レイヤーになる*/
+        top: 0;              /*左上に固定*/
+        left: 0;
+        z-index: 100;        /*別レイヤーになった時、この数字が大きいほうが上に来る*/
+        width: 100%;
+        background-color: rgba(255,255,255,0.9);
+    }
+
+    .headA{
+        display: inline-block;
+        line-height: 70px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        background-color: var(--main-color);
+        background-color: #5D9AB2;
+        color: var(--text-bright-color);
+        color: #ffffff;
+
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+        text-decoration: none;
+    }
+
+    .headB ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .headB a{
+        display: block;
+        padding: 15px;
+
+        color: inherit;
+        font-size: 12px;
+
+        text-decoration: none;
+    }
+
+    .headB a:hover{
+        background-color: rgba(0,0,0,0.1);
+    }
+/*---------- / header------------*/
+
+
+/*-----------content A-----------*/
+    .conA{
+        display: flex; /*ブロック要素からインライン要素に変える*/
+        align-items: center;/*フレキシブルボックスの縦の位置を指定*/
+        justify-content: center;/*フレキシブルボックスの横の位置を指定*/
+
+        background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(img/fruits.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        min-height: 450px;
+
+        color: var(--text-bright-color); /*変数の呼び出し*/
+        color: #fff; /*変数に対応していないブラウザの為に書いとく*/
+        text-align: center;
+    }
+
+    .conA img{width: 20%;}
+
+    .conA h1{
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-family: 'Montserrat',sans-serif;
+        font-size: 15vw;
+        letter-spacing: 0.2em;
+        margin-left: 0.2em;
+    }
+
+    .conA p{
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 18;
+    }
+
+    .conA a{
+        margin-top: 20px; /*ボタンと↑の<p>の間の距離*/
+
+        display: inline-block;
+        padding: 10px 30px; /*ボタンの枠と文字の間の上10px下30pxの隙間*/
+        border: solid 3px currentColor;
+        border-radius: 6px;
+
+        background-color: #BF6A7A;
+        /*background-color: var(--accent-color);*/
+        color: var(--text-bright-color); /*変数の呼び出し*/
+        color: #fff; /*変数に対応していないブラウザの為に書いとく*/
+        
+        font-size: 14px;
+        font-weight: 900;
+        text-decoration: none; /*aタグなので文字下に線が出てしまう。それを表示させなくする*/
+    }
+
+    .conA a:hover{
+        background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2));
+
+    }
+/*-------- / content A-----------*/
+
+
+/*-----------content B-----------*/
+
+    .conB .text{
+        text-align: center;
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-bottom: 60px;
+    }
+
+    .conB h2{
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .conB p{
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 1.8; /*行の高さをフォントサイズの1.8倍にしている。デフォは1.5倍*/
+        opacity: 0.8; /*透明度の設定。h2と区別を付けるため、文字の透明度を0.8倍にしている*/
+    }
+
+    .conB a{
+        color: #5D9AB2;
+        color: var(--main-color);
+        text-decoration: none;
+    }
+
+    .conB a:hover{
+        text-decoration: underline;
+    }
+
+    .conB .icon{
+        display: inline-block;
+        margin-bottom: 20px;
+
+        font-size: 40px;
+        text-align: center;
+        color: var(--icon-color);
+        color:#ffffff;
+        background-color: var(--icon-BK-color);
+        background-color: #dddddd;
+
+        width: 2em;
+        line-height: 2em;
+        border-radius: 50%; /*縦と横の大きさを同じにしてborder-radiusを50%にするとボックスが真円になる*/
+    }
+
+    .conB .container{
+        padding-top: 80px;
+        padding-bottom: 20px;
+    }
+
+/*-------- / content B-----------*/
+
+
+/*-----------content C-----------*/
+
+    .conC{
+        background-color:#5D9AB2;
+        background-color: var(--main-color);
+
+        color: #ffffff;
+        color: var(--text-bright-color);
+    }
+
+    .conC .text{
+        padding: 20px;
+    }
+
+    .conC .photo{
+        min-height: 200px;
+        background-image: url(img/note.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    .conC h2{
+        font-size: 20px;
+        margin-top: 0;
+        margin-bottom: 10px
+    }
+
+    .conC p{
+        font-size: 14px;
+        line-height: 1.8;
+        opacity: 0.8;
+
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .conC a{
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 30px;
+        border: solid 3px currentColor;
+        border-radius: 6px;
+
+        background-color: #BF6A7A;
+        /*background-color: var(--accent-color);*/
+        color: var(--text-bright-color); /*変数の呼び出し*/
+        color: #fff; /*変数に対応していないブラウザの為に書いとく*/
+
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    .conC a:hover{
+        background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2));
+    }
+
+/*-------- / content C-----------*/
+
+
+/*-----------content D-----------*/
+
+    .conD{
+        /*/background-color: #BF6A7A;*/                /*ここをいじればすぐに背景を変えられるよ*/
+        /* background-image: url(img/life.jpg);
+        background-position: center;
+        background-size: cover;*/
+    }
+
+    .conD .container{
+        padding-top: 2px;
+    }
+
+    .conD .text{
+        padding: 20px;
+        /*background-color: rgba(255,255,255,0.5);*/
+    }
+
+    .conD .photo{
+        background-image: url(img/life.jpg);
+        min-height: 200px;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .conD h2{
+        font-size: 20px;
+        margin-top: 0;
+        margin-bottom: 10px
+    }
+
+    .conD p{
+        font-size: 14px;
+        line-height: 1.8;
+        opacity: 0.8;
+
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .conD a{
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 30px;
+        border: solid 3px currentColor;
+        box-shadow:0 0 0 1px gray;
+        border-radius: 6px;
+
+        background-color: #BF6A7A;
+        /*background-color: var(--accent-color);*/
+        color: var(--text-bright-color); /*変数の呼び出し*/
+        color: #fff; /*変数に対応していないブラウザの為に書いとく*/
+
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    .conD a:hover{
+        background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2));
+    }
+
+/*-------- / content D-----------*/
+
+
+/*-------------footer------------*/
+    footer{
+        color: #ffffff;
+        color: var(--text-bright-color);
+        background-color: #285566;
+        /*background-color: var(--dark-main-color);*/
+    }
+
+    footer .container{
+        padding: 40px 20px;
+    }
+
+    .footA{
+        margin-bottom: 30px;
+    }
+
+    .footA h2{
+        margin-top: 0;
+        margin-bottom: 10px;
+
+        font-family: 'Montserrat', sans-serif;
+        font-size: 30px;
+        letter-spacing: 0.2em;
+
+    }
+
+    .footA p{
+        margin-top: 0;
+        margin-bottom: 0px;
+        font-size: 14px;
+    }
+
+    .footA a{
+        text-decoration: none;
+        color: inherit;   /* inherit は親要素（ここでは<P>）の色と一緒にする値*/
+    }
+
+    .footB h3{
+        margin-top: 0;
+        margin-bottom: 10px;
+
+        border-bottom: solid 1px currentColor;  /* currentColor は親要素の文字色（ここではfooter{ color: #ffffff;）と同じ色にする */
+
+        font-size: 14px;
+    }
+
+    .footB ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;  /*リストマークをなくす*/
+    }
+
+    .footB a{
+        display: block;
+        padding: 5px;
+
+        color: inherit;
+        font-size: 12px;
+        text-decoration: none;
+    }
+
+    .footB a:hover{
+        background-color: rgba(0,0,0,3);
+    }
+
+    .footB div{
+        margin-bottom: 20px;
+    }
+
+    .footC{
+        font-size: 12px;
+        text-align: center;
+        font-family: 'Montserrat',sans-serif;
+    }
+
+    .footD{
+        margin-top: 20px;
+    }
+
+    .footD ul{
+        display: flex;
+
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .footD a{
+        display: block;
+        padding: 0px;
+        margin-right: 8px;
+
+        color: inherit;
+        font-size: 16px;
+
+        text-decoration: none;
+
+        border: solid 1px currentColor; /* currentColor は文字（ここではロゴ）と同じ色 */
+        width: 2em;
+        line-height: 2em;
+        border-radius: 50%;
+        text-align: center; /* 囲った〇の中でセンターにロゴが来るように指定 */
+    }
+
+    .footD a:hover{
+        background-color: rgba(0,0,0,3);
+    }
+/*---------- / footer------------*/
+
+
+
+/* ↓ 画面の横幅が768px以上(ipadやノートPC)の時に動作する。この768pxのラインをブレークポイントという*/
+@media(min-width:768px){
+    header .container{
+        display: flex;
+        align-items: center; /*コンテナ内でitemの高さを真ん中に指定*/
+        justify-content: space-between; /* item の間に均等にスペースを設ける、ここでは両端揃えになる*/
+
+        max-width: 1000px;
+        max-width: var(--large-width);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .headB{
+        display: block !important;  /* !inportant は最優先で実行されるコード*/
+    }                               /* 小さい画面の時に headB のディスプレイを消したのだが
+                                       たまに大きい画面の時も消えてしまうので、念押し */
+
+    .headB ul{
+        display: flex;
+    }
+
+    .headC{
+        display: none;  /*大きい画面の時はボタンを表示しない*/
+    }
+
+    .conA h1{
+        font-size: 115px;
+    }
+
+    .conA p{
+        font-size: 24px;
+    }
+
+
+    .conB .container{
+        display: flex;
+
+        max-width: 1000px;
+        max-width: var(--large-width);
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .conB .text{
+        flex:1;
+        padding: 50px;
+    }
+
+
+    .conC .container{
+        display: flex;
+
+        max-width: 1000px;
+        max-width: var(--large-width);
+
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .conC .photo{
+        flex:3;
+    }
+
+    .conC .text{
+        flex:2;
+    }
+
+
+    .conD .container{
+        display: flex;
+        flex-direction: row-reverse; /* flex item の並べる方向を指定できる。「row」は横並び*/
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        max-width: 1000px;
+        max-width: var(--large-width);
+
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .conD .photo{
+        flex:0 0 400px;
+    }
+
+    .conD .text{
+        float: 1;
+        padding: 50px;
+    }
+
+    footer .container{
+        display: flex;
+        flex-wrap: wrap; /* flex item（複数）がコンテナブロックからはみ出した時に他の行に折り返しに表示させる*/
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footA{
+        flex: 0 0 40%; /* flex: itemの伸び率 itemの収縮率 itemの幅 */
+    }
+
+    .footB{
+        display: flex;
+        flex: 0 0 60%;
+    }
+
+    .footB div{
+        flex: 1;
+    }
+
+    .footB div:not(:first-child){  /* :first-child は1つ目の子要素の事を指す*/
+        margin-left: 40px;         /* :not() は指定した条件と一致しない要素の事を指す*/
+    }                              /* なのでここでは「1つ目の子要素以外」にプロパティが適用されることになる */
+
+    .footC{
+        flex: 0 0 100%
+    }
+
+    .history .container{
+        display: flex;
+
+        max-width: 1000px;
+        max-width: var(--large-width);
+
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .history .photo{
+        flex:3;
+    }
+
+    .history .text{
+        flex:2;
+    }
+
+    .contact-wrap{
+        display: flex;
+    }
+
+    .contact{
+        flex:1
+    }
+
+    .contact:first-child{      /* :first-child は複数あるクラスの一番最初だけを指定する */
+        margin-right: 20px;
+    }
+
+    .ques{
+        margin : 20px 20px 20px 0 !important;
+    }
+
+    .post aside a{
+        font-size: 1.5rem !important;
+    }
+}
+
+
+/* ↓ 画面の横幅が768px未満(iphoneやスマホなど)の時に動作する。この768pxのラインをブレークポイントという*/
+@media(max-width:767px){
+    header .container-small{
+        display: flex;
+        align-items: center; /* container-small のブロックの行の真ん中位置に指定 */
+        justify-content: space-between;
+    }
+
+    .headC{
+        margin-right: 10px;
+
+        padding: 0;        /*元々のボタンのデザインの枠線内の余白を０に*/
+        border: none;      /*元々のボタンのデザインの枠線を消す*/
+        outline: none;     /*元々のボタンのデザインの枠線を消す*/
+        background: none;  /*元々のボタンのデザインの背景を消す*/
+
+        font-size: 28px;
+        opacity: 0.5;      /*ボタンの色素を薄くする*/
+        cursor: pointer;   /*マウスでこのボタンに触れる時、矢印カーソルではなく人の指カーソルになる*/
+    }
+
+    .headC:hover{
+        opacity: 0.3;
+    }
+
+    .headB{
+        display: block;
+    }
+}
+
+
+
+/*--------------- ↓ ここからのコードはコンテンツページ用 --------------------*/
+
+
+
+/* ↓ 画面の横幅が599px未満(iphoneやスマホなど)の時に動作する。*/
+@media(max-width:599px){
+    :root{
+        font-size: 14px;
+    }
+}
+
+/* ↓ 画面の横幅が 600 - 799px (タブレットなど)の時に動作する。*/
+@media(min-width:600px)and(max-width:799px){
+    :root{
+        font-size: 16px;
+    }
+}
+
+/* ↓ 画面の横幅が800px以上(PCなど)の時に動作する。*/
+@media(min-width:800px){
+    :root{
+        font-size: 18px;
+    }
+}
+
+.nohero header{
+    position: static;  /* static は positionプロパティのデフォルトの設定 */
+    border-bottom: solid 1px #ddd;
+}
+
+.post .container{
+    padding: 30px 10px;
+
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.post h1{
+    font-size: 2rem; /* rem とは root em の略でルートで、決めた基本サイズに対して2倍・3倍などのサイズに指定できる  */
+                     /* ここでは画面サイズ別で大きさを変えたい時に使用する単位 */
+    padding-left: 0.5rem;
+    border-left: solid 0.75rem #BF6A7A;
+}
+
+.post p{
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.post img{
+    max-width: 100%;
+}
+
+.bread ol{
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.bread a{
+    display: block;
+    padding: 5px;
+    color: inherit;
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+.bread a::after{  /* ::after は選択した要素（ここでは a ）の最後に別の子要素（ここでは content \f054）を挿入する */
+    margin-left: 10px;
+    content: '\f054';      /* \f054 は FontAwesome の絵文字の固有コード */
+    font-family: 'FontAwesome';  /* FontAwesome を使用するのでフォントを指定 */
+    opacity: 0.3;
+}
+
+
+/*--------------- ↓ ここからのコードはABOUTページ用 --------------------*/
+
+
+
+.history{
+    background-color:#5D9AB2;
+    background-color: var(--main-color);
+
+    color: #ffffff;
+    color: var(--text-bright-color);
+}
+
+.history .text{
+    padding: 20px;
+}
+
+.history .photo{
+    min-height: 300px;
+    background-image: url(img/plant.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.history h2{
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 10px
+}
+
+.history table{
+    border-top: solid 1px #ddd;
+    border-collapse: collapse;   /* collapse はボーダー(枠線)同士が重なってしまうとき、そのまま重ねて1本の線にする
+                                    か(collapse)、少し線をずらせて二重線に表示するか指定する */
+
+    font-size: 0.875rem;
+
+    display: block;
+    margin-top: 2rem;
+}
+
+.history tr{
+    border-bottom: solid 1px #ddd;
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+}
+
+.history th{
+    padding-right: 1rem;
+    text-align: left;
+    word-break: keep-all;  /* word-break: keep-all は改行を禁止して表示する */
+}
+
+
+/*--------------- ↓ ここからのコードはお問い合わせページ用 --------------------*/
+
+
+.contact{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+
+    border: solid 1px #ddd;
+
+    text-align: center;
+}
+
+.contact h2{
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.contact i{
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    width: 2em;
+    line-height: 2em;
+    border: solid 1px #ddd;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #5D9AB2;
+    color: #fff;
+}
+
+.contact a{
+    font-size: 1.4rem;
+
+}
+
+.location iframe{
+    width: 100%;
+    height: 400px;
+    vertical-align: bottom;
+
+}
+
+.location h2{
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    text-align: center;
+
+    font-size: 1.5rem;
+    color: #fff;
+
+    background-color: #5D9AB2;
+}
+
+
+/*--------------- ↓ ここからのコードは 記事(all) ページ用 --------------------*/
+
+
+.option{
+    background-color: var(--main-color);
+    margin: 0;
+    padding: 0;
+}
+
+.option div{
+    margin-left: 10px;
+}
+
+.option h2{
+    color: var(--text-bright-color);
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    padding-left: 10px;
+    padding-bottom: 5px;
+    margin: 15px 0 5px 0;
+}
+
+.type{
+    text-align: center;
+}
+
+.type a:hover{
+    background-color: rgb(134, 176, 192);
+}
+
+.option a{
+    color: var(--text-bright-color);
+    text-decoration: none;
+
+    border: solid 3px #ffffff;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.555);
+    padding: 5px;
+    margin-left: 5px;
+}
+
+
+
+
+/*--------------- ↓ ここからのコードは 記事A ページ用 --------------------*/
+
+
+.conA.compact{
+    height: 450px;
+    min-height: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(img/balloon.jpg);
+}
+
+.listA h1{
+    text-align: center;
+}
+
+.listA .container{
+    display: flex;
+    flex-wrap: wrap;  /* flex item（複数）がコンテナブロックからはみ出した時に他の行に折り返しに表示させる*/
+
+    max-width: 1000px;
+    margin: 30px auto;  /* margin: 上下の余白 左右の余白 */
+}
+
+.listA article{
+    flex: 1 1 300px; /* flex: itemの伸び率 itemの収縮率 itemの幅 */
+    display: flex;
+}
+
+.listA a{
+    flex: 1;
+    display: block;
+
+    margin: 10px;
+
+    border: solid 1px #ddd;
+
+    color: inherit;
+    text-decoration: none;
+
+}
+
+.listA a:hover{
+    opacity: 0.8;
+}
+
+.listA h2{
+    font-size: 18px;
+}
+
+.listA p{
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.listA .photo{
+    min-height: 150px;
+    background-position: center;
+    background-size: cover;
+}
+
+.listA .text{
+    margin: 10px;
+}
+
+
+
+
+/*--------------- ↓ ここからのコードは 記事B ページ用 --------------------*/
+
+
+
+
+.listB h1{
+    text-align: center;
+}
+
+.listB .container{
+    display: flex;
+    flex-wrap: wrap;  /* flex item（複数）がコンテナブロックからはみ出した時に他の行に折り返しに表示させる*/
+
+    max-width: 1000px;
+    margin: 30px auto;  /* margin: 上下の余白 左右の余白 */
+}
+
+.listB article{
+    flex: 1 1 348px; /* flex: itemの伸び率 itemの収縮率 itemの幅 */
+    display: flex;
+}
+
+.listB a{
+    flex: 1;
+    display: flex;
+
+    margin: 10px;
+
+    border: solid 1px #ddd;
+
+    color: inherit;
+    text-decoration: none;
+
+}
+
+.listB a:hover{
+    opacity: 0.8;
+}
+
+.listB h2{
+    font-size: 18px;
+}
+
+.listB p{
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.listB .photo{
+    flex: 2;
+    min-height: 0;
+    background-position: center;
+    background-size: cover;
+}
+
+.listB .text{
+    flex: 3;
+    margin: 10px;
+}
+
+.listB .container{
+    display: flex;
+    flex-wrap: wrap;  /* flex item（複数）がコンテナブロックからはみ出した時に他の行に折り返しに表示させる*/
+}
+
+@media(max-width: 348px){
+    .listB .photo{
+        flex: 1;
+    }
+
+    .listB p{
+        display: none;
+    }
+}
+
+
+
+/*--------------- ↓ ここからのコードは 記事C ページ用 --------------------*/
+
+
+
+.listC h1{
+    text-align: center;
+}
+
+.listC .container{
+    display: flex;
+    flex-wrap: wrap;  /* flex item（複数）がコンテナブロックからはみ出した時に他の行に折り返しに表示させる*/
+
+    max-width: none;
+    margin: 40px auto auto auto;  /* margin: 上下の余白 左右の余白 */
+}
+
+.listC article{
+    flex: 1 1 250px; /* flex: itemの伸び率 itemの収縮率 itemの幅 */
+            /* ↑ ここでは画面幅1000pxに対し４つのリスト<a>を表示したいので 1000/4=250px */
+
+    display: flex;
+}
+
+.listC a{
+    position: relative;  /* 子要素(ここでは.photoと.text)に「position: absolute」などを使うときは、親要素に「position: relative」を指定しとく */
+
+    flex: 1;
+    display: block;
+
+    margin: 2px;
+
+    border: solid 1px #ddd;
+
+    color: inherit;
+    text-decoration: none;
+
+    background-color: black;  
+
+}
+
+.listC a:hover{
+    opacity: 0.8;
+}
+
+.listC h2{
+    margin: 0;
+
+    font-size: 18px;
+}
+
+.listC p{
+    margin: 0;
+
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.listC .photo{
+    min-height: 250px;
+    background-position: center;
+    background-size: cover;
+
+    opacity: 0.6;
+}
+
+.listC .text{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    margin: 10px;
+
+    color: #fff;
+}
+
+.listC .container{
+
+    display: flex;
+    flex-wrap: wrap;  /* flex item（複数）がコンテナブロックからはみ出した時に他の行に折り返しに表示させる*/
+}
+
+@media(min-width: 1000px){  /* 画面幅が大きくなればなるほど、一段に沢山のリスト<a>が並べられるので、
+                               リスト<a>の幅を画面の1/4の大きさになるように設定する。これでどんなに画面が広くなっても４つしか並ばない。 */
+    .listC article{
+        flex: 1 1 25%;
+    }
+
+    .listC article:nth-child(4n+1){  /* nth-child(4n+1) フレックスアイテムの５番目９番目１３番目の要素にだけ適応する */
+        flex: 1 1 50%;
+    }
+}
+
+
+
+/*--------------- ↓ ここからのコードは よくある質問 ページ用 --------------------*/
+
+
+.ques{
+    display: flex;
+    flex-direction: column;
+
+    border: outset 5px var(--main-color);
+    padding: 10px;
+    margin: 5px 5px 5px 0;
+}
+
+.ques h2{
+    flex: 1 1 auto;
+    margin: 0 0 8px 0;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.ques p{
+    flex: 1 1 auto;
+
+    margin: 0;
+    padding: 4px;
+
+    font-size: 1rem;
+
+    border: dotted 1px gray;
+}
+
+.ques h2 i{
+    line-height: 1.3rem;
+    font-size: 1.3rem;
+
+    padding: 0.3rem;
+
+    border-radius: 50%;
+
+    text-align: center;
+
+    color: var(--text-bright-color);
+    background-color: #BF6A7A;
+}
+
+.ques p i{
+    line-height: 1rem;
+    font-size: 1.3rem;
+
+    padding: 0.4rem;
+
+    border-radius: 50%;
+
+    text-align: center;
+
+    color: var(--text-bright-color);
+    background-color: #BF6A7A;
+}
+
+.post aside{
+    display: block;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.post aside a{
+    display: inline;
+
+    padding: 0.5rem;
+
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    
+    background-color: rgba(191, 106, 122, 0.349);
+    border: solid 3px rgba(209, 66, 90, 0.534);
+}
+
+.post aside a:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+
+
+
+
+/*--------------- ↓ ここからのコードは アレンジ 用 --------------------*/
+
+
+.head-color{
+    background-color: #5D9AB2;
+    background-color: var(--main-color);
+
+    color: #fff;
+    color: var(--text-bright-color);
+}
+
+.head-color .headA{
+    background-color: transparent;  /* transparent は背景を透過させる。親(.head-color)の背景が#5D9AB2なので、透過するとその色の背景が映る */
+    color: inherit; /* inherit は親要素(ここでは.head-color)の文字の色を引用する */
+}
+
+.head-color .headC{
+    color: inherit;
+}
+
+
+
+
+
+
+.head-hero{
+    background-color: transparent;
+
+    color: #fff;
+    color: var(--text-bright-color);
+}
+
+.head-hero .headA{
+    background-color: transparent;  /* transparent は背景を透過させる。親(.head-color)の背景が#5D9AB2なので、透過するとその色の背景が映る */
+    color: inherit; /* inherit は親要素(ここでは.head-color)の文字の色を引用する */
+    font-weight: 800;
+}
+
+.head-hero .headB{
+    color: inherit;
+    font-weight: 500;
+}
+
+.head-hero .headC{
+    color: inherit;
+    opacity: 1;
+}
+
+.head-fixed , .nohero .head-fixed{
+    position: fixed;
+}
+
+.nohero .head-fixed + *{  /* 要素1 + 要素2 と打つと要素1に続く要素2に適用される */
+    margin-top: 70px;     /* 「*」は全ての要素を指定している */
+}                         /* なのでここでは「.nohero .head-fixed」に隣接する全ての要素に「margin-top: 70px」が掛かっている */
+
+
+
+
+
+
+.related{
+    background-color: var(--main-color);
+    background-color: #5D9AB2;
+    padding: 30px 0; /* padding: 上下の余白 左右の余白 */
+}
+
+.related ul{
+    display: flex;
+    flex-wrap: wrap;  /* flex item（複数）がコンテナブロックからはみ出した時に他の行に折り返しに表示させる*/
+
+    max-width: 1000px;
+    margin: 0 auto;  /* margin: 上下の余白 左右の余白 */
+    padding: 0;
+
+    list-style: none;
+}
+
+.related li{
+    flex: 1 1 300px; /* flex: itemの伸び率 itemの収縮率 itemの幅 */
+    display: flex;
+}
+
+.related a{
+    flex: 1;
+    display: block;
+
+    margin: 10px;
+
+    border: solid 1px #ddd;
+
+    color: inherit;
+    text-decoration: none;
+
+    background-color: rgba(255,255,255,0.5);
+}
+
+.related a:hover{
+    opacity: 0.8;
+}
+
+.related h2{
+    font-size: 18px;
+}
+
+.related p{
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.related .photo{
+    min-height: 100px;
+    background-position: center;
+    background-size: cover;
+}
+
+.related .text{
+    margin: 10px;
+}
+
+@media(min-width: 900px){
+    .related li{
+        flex: 1 1 25%;
+    }
+}
+
+@media(max-width: 767px){
+    .head-hero .headB{
+        background-color: rgba(0,0,0,0.6);
+
+    }
+}
+
+
+
+
