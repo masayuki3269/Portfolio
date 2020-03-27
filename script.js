@@ -69,7 +69,6 @@ for (var i = 0; i < linkElem.length; i++) {
 
 var labelElem = document.querySelectorAll('label:not(.no_hov_stalker)'); 
 
-
 for (var j = 0; j < labelElem.length; j++) {
 
     //マウスホバー時、つまり複数あるどれかの<label>要素にマウスが重なった時下の処理がされる
@@ -106,4 +105,13 @@ for (var j = 0; j < labelElem.length; j++) {
         stalker_2.classList.remove('hover-2');
         stalker_3.classList.remove('hover-3');
     });
+}
+
+
+// check-boxの状態を変える
+function check_box_change(idname){
+    var obj = document.getElementById(idname);　// 特定の<input id="???">を取得
+
+    // .checkedプロパティはチェックボックスの状態を示している
+    obj.checked = !obj.checked;   // ここでは現状のチェックボックスの値(check or checked)に現状とは逆の値を入れている
 }
