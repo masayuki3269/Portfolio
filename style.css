@@ -159,7 +159,24 @@ i{
     }
 }
 
-#cursor-stalker {
+.instruction{
+    font-size: 1em;
+    color: var(--tittle-font-color-);
+    opacity: 0.6;
+    padding-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/*----------------- cursor-stalker -----------------*/
+#cursor-stalker{
     /* 値を none に設定すると、要素がポインターイベントのターゲットではないことを示すのに加え、ポインターイベントが要素を「通過」して、
        代わりに要素の「下」をターゲットにすることを指示します。 */
     pointer-events: none; 
@@ -185,13 +202,86 @@ i{
 }
 
 .hover{
-    opacity: 0.4 !important;
+    opacity: 0.2 !important;
     top: -50px !important;    
     left: -24px !important;   
     width: 70px !important;
     height: 70px !important;
     transition: .5s !important;
 }
+
+#cursor-stalker-2{
+    /* 値を none に設定すると、要素がポインターイベントのターゲットではないことを示すのに加え、ポインターイベントが要素を「通過」して、
+       代わりに要素の「下」をターゲットにすることを指示します。 */
+    pointer-events: none; 
+
+    position: fixed;
+    z-index: 999;
+    top: 5px;     /*座標調節（カーソル位置と円の中心を合わせる）*/
+    left: 18px;    /*座標調節（カーソル位置と円の中心を合わせる）*/
+
+    background-image: url(img/note-2-transparent.png);
+    background-position: bottom;
+    background-size: cover;
+    width: 18px;   /*マウスストーカーの直径*/
+    height: 18px;  /*マウスストーカーの直径*/
+    
+    transform: translate(0,0);   /*任意の位置に要素を移動させる*/
+    /* jsでここに transform: translate( e.clientX px , e.clientY px ); が追加される*/
+
+    opacity: 1;
+    
+    transition: top, 1.5s, left 1.5s,opacity .5s;  /*ちょっと遅れてついてくるように*/
+    transition-timing-function: ease-out;
+}
+
+.hover-2{
+    opacity: 0.3 !important;
+    top: -25px !important;    
+    left: -24px !important;   
+    transition: .5s !important;
+}
+
+#cursor-stalker-3{
+    /* 値を none に設定すると、要素がポインターイベントのターゲットではないことを示すのに加え、ポインターイベントが要素を「通過」して、
+       代わりに要素の「下」をターゲットにすることを指示します。 */
+    pointer-events: none; 
+
+    position: fixed;
+    z-index: 999;
+    top: -50px;     /*座標調節（カーソル位置と円の中心を合わせる）*/
+    left: -24px;    /*座標調節（カーソル位置と円の中心を合わせる）*/
+
+    background-image: url(img/note-3-transparent.png);
+    background-position: bottom;
+    background-size: cover;
+    width: 35px;   /*マウスストーカーの直径*/
+    height: 35px;  /*マウスストーカーの直径*/
+    
+    transform: translate(0,0);   /*任意の位置に要素を移動させる*/
+    /* jsでここに transform: translate( e.clientX px , e.clientY px ); が追加される*/
+
+    opacity: 1;
+    
+    transition: top, 1s, left 1s, opacity .5s;  /*ちょっと遅れてついてくるように*/
+    transition-timing-function: ease-out;
+}
+
+.hover-3{
+    opacity: 0.3 !important;
+    top: -50px !important;    
+    left: -24px !important;   
+    transition: .5s !important;
+}
+/*----------------- cursor-stalker -----------------*/
+
+
+
+
+
+
+
+
 
 
 
@@ -249,6 +339,13 @@ header li a:hover{
 }
 
 /*----------------- header -----------------*/
+
+
+
+
+
+
+
 
 
 
@@ -333,10 +430,17 @@ main p{
 
 
 
+
+
+
+
+
+
+
 /*----------------- section.profile -----------------*/
 
 .profile{
-    background-image: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)),url(img/section-profile-background.png);
+    background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)),url(img/section-profile-background.png);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -461,6 +565,13 @@ main p{
 
 
 
+
+
+
+
+
+
+
 /*----------------- section. work-introduction -----------------*/
 
 .work-introduction{
@@ -481,38 +592,18 @@ main p{
 }
 
 .work-introduction .content h3{
-    display: inline-block;
-    position: relative;
     border-right: 3px ridge var(--tittle-font-color-);
     border-left: 3px ridge var(--tittle-font-color-);
-    padding:5px 5px 0 5px;
-    margin-bottom: 10px;
 }
 
 .work-introduction .content h3::before{
-    top: 0;
-    left: 0;
     background: linear-gradient(135deg, var(--tittle-font-color-) 0%, var(--tittle-font-color-) 50%, transparent 50%, transparent 100%);
-
     content: '';
-    display: block;
-    width: 8px;
-    height: 8px;
-    position: absolute;
-    z-index: 1;
 }
 
 .work-introduction .content h3::after{
-    right: 0;
-    bottom: 0;
     background: linear-gradient(135deg, transparent 0%, transparent 50%, var(--tittle-font-color-) 50%, var(--tittle-font-color-) 100%);
-
     content: '';
-    display: block;
-    width: 8px;
-    height: 8px;
-    position: absolute;
-    z-index: 1;
 }
 
 iframe{
@@ -573,8 +664,80 @@ aside h4{
     opacity: 1;
 }
 
-
-
-
-
 /*----------------- section. work-introduction -----------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------- section. working-style -----------------*/
+
+.working-style{
+    background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)),url(img/section-working-style-background.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    text-shadow: 0.5px 0.5px #00000033;
+}
+
+/*----------------- section. working-style -----------------*/
+
+
+
+
+
+
+
+
+
+/*----------------- section. vision -----------------*/
+
+.vision{
+    background-image: linear-gradient(rgba(255, 168, 38, 0.8),rgba(255, 168, 38, 0.8)),url(img/section-vision-background.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    text-shadow: 0.5px 0.5px #00000033;
+}
+
+.vision h2{
+    border-bottom: 1px solid var(--tittle-font-color-);
+}
+
+.vision .content h3{
+    border-right: 3px ridge var(--tittle-font-color-);
+    border-left: 3px ridge var(--tittle-font-color-);
+}
+
+.vision .content h3::before{
+    background: linear-gradient(135deg, var(--tittle-font-color-) 0%, var(--tittle-font-color-) 50%, transparent 50%, transparent 100%);
+
+    content: '';
+}
+
+.vision .content h3::after{
+    background: linear-gradient(135deg, transparent 0%, transparent 50%, var(--tittle-font-color-) 50%, var(--tittle-font-color-) 100%);
+
+    content: '';
+}
+
+.vision i{
+    display: flex;
+    justify-content: center;
+    color: var(--tittle-font-color-);
+    font-size: 50px;
+    padding: 20px 0;
+}
+
+/*----------------- section. vision -----------------*/

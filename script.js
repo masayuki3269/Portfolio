@@ -1,6 +1,8 @@
 
 //マウスストーカー用のdivを取得
 var stalker = document.getElementById('cursor-stalker'); 
+var stalker_2 = document.getElementById('cursor-stalker-2');
+var stalker_3 = document.getElementById('cursor-stalker-3');
 
 //aタグにホバー中かどうかの判別フラグ
 var hovFlag = false;
@@ -10,6 +12,8 @@ document.addEventListener('mousemove', function (e) {
 
     if (!hovFlag) { // hovFlag が false (aタグの上に無い)時
     stalker.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+    stalker_2.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+    stalker_3.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
     }
 
 });
@@ -32,6 +36,8 @@ for (var i = 0; i < linkElem.length; i++) {
 
         //マウスストーカーにクラスをつける
         stalker.classList.add('hover');
+        stalker_2.classList.add('hover-2');
+        stalker_3.classList.add('hover-3');
 
         //マウスストーカーの位置をリンクの中心に固定
         var rect = e.target.getBoundingClientRect(); 
@@ -40,15 +46,22 @@ for (var i = 0; i < linkElem.length; i++) {
 
         var posX = rect.left + (rect.width / 2); // リンクの中心のx座標
         var posY = rect.top + (rect.height / 2); // リンクの中心のy座標
+        var posX_2 = rect.left
+        var posY_2 = rect.top + (rect.height / 4);
+        var posX_3 = rect.right
+        var posY_3 = rect.top + (rect.height / 4);
 
         stalker.style.transform = 'translate(' + posX + 'px, ' + posY + 'px)';
-
+        stalker_2.style.transform = 'translate(' + posX_2 + 'px, ' + posY_2 + 'px)';
+        stalker_3.style.transform = 'translate(' + posX_3 + 'px, ' + posY_3 + 'px)';
     });
 
     //マウスホバー解除時
     linkElem[i].addEventListener('mouseout', function (e) {
         hovFlag = false;
         stalker.classList.remove('hover');
+        stalker_2.classList.remove('hover-2');
+        stalker_3.classList.remove('hover-3');
     });
 }
 
@@ -65,6 +78,8 @@ for (var j = 0; j < labelElem.length; j++) {
 
         //マウスストーカーにクラスをつける
         stalker.classList.add('hover');
+        stalker_2.classList.add('hover-2');
+        stalker_3.classList.add('hover-3');
 
         //マウスストーカーの位置をリンクの中心に固定
         var rect = e.target.getBoundingClientRect(); 
@@ -73,8 +88,14 @@ for (var j = 0; j < labelElem.length; j++) {
 
         var posX = rect.left + (rect.width / 2); // リンクの中心のx座標
         var posY = rect.top + (rect.height / 2); // リンクの中心のy座標
+        var posX_2 = rect.left
+        var posY_2 = rect.top + (rect.height / 4);
+        var posX_3 = rect.right
+        var posY_3 = rect.top + (rect.height / 4);
 
         stalker.style.transform = 'translate(' + posX + 'px, ' + posY + 'px)';
+        stalker_2.style.transform = 'translate(' + posX_2 + 'px, ' + posY_2 + 'px)';
+        stalker_3.style.transform = 'translate(' + posX_3 + 'px, ' + posY_3 + 'px)';
 
     });
 
@@ -82,5 +103,7 @@ for (var j = 0; j < labelElem.length; j++) {
     labelElem[j].addEventListener('mouseout', function (e) {
         hovFlag = false;
         stalker.classList.remove('hover');
+        stalker_2.classList.remove('hover-2');
+        stalker_3.classList.remove('hover-3');
     });
 }
