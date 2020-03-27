@@ -1,8 +1,6 @@
 @charset "utf-8";
 
-
 /*----------------- reset css -----------------*/
-
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -107,8 +105,14 @@ button {
  padding: 0;
  appearance: none;
 }
-
 /*----------------- reset css -----------------*/
+
+
+
+
+
+
+
 
 
 
@@ -145,17 +149,17 @@ i{
 @keyframes shake{
     0%{
         transform: rotate(15deg);
+        opacity: 1;
     }
 
     50%{
         transform: rotate(0deg);
-        background-color: #00000013
-        ;
+        opacity: 0.7;
     }
 
     100%{
         transform: rotate(-15deg);
-        background-color: #00000025;
+        opacity: 0.4;
     }
 }
 
@@ -166,6 +170,52 @@ i{
     padding-left: 10px;
 }
 
+
+
+
+
+
+
+
+
+
+/*----------------- accordion block -----------------*/
+.switch{
+    display: none;
+    margin-left: 500px;
+}
+
+.for-switch-container{
+    padding: 0 30px;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.for-switch-small-container{
+    overflow: hidden;
+}
+
+.switch:not(:checked)+.for-switch-container , .switch:not(:checked)+.for-switch-small-container{
+    height: 0;
+    opacity: 0;
+    
+}
+
+.switch:checked+.for-switch-container , .switch:checked+.for-switch-small-container{
+    height: 100%;
+    opacity: 1;
+}
+
+.for-switch-small-container{
+    transition: all 0.5s;
+}
+
+.for-switch-small-container iframe:nth-child(2){
+    margin-bottom: 100px;
+}
+
+/*----------------- accordion block -----------------*/
 
 
 
@@ -275,6 +325,33 @@ i{
 }
 /*----------------- cursor-stalker -----------------*/
 
+
+
+
+
+
+
+
+
+
+
+/*----------------- container-system -----------------*/
+
+.first-container{
+    width: 75%;
+    margin: 0 auto 0 auto;
+    padding: 100px 0 75px 0;
+}
+
+.content{
+    margin: 40px 0;
+}
+
+.work-introduction .content{
+    margin-bottom: 50px;
+}
+
+/*----------------- container-system -----------------*/
 
 
 
@@ -448,12 +525,6 @@ main p{
     text-shadow: 0.5px 0.5px #00000033;
 }
 
-.first-container{
-    width: 75%;
-    margin: 0 auto 0 auto;
-    padding: 100px 0 75px 0;
-}
-
 .first-container h2{
     text-align: center;
     border-bottom: 1px solid var(--main-color-);
@@ -517,11 +588,6 @@ main p{
     z-index: 1;
 }
 
-
-.content{
-    margin: 40px 0;
-}
-
 .content .graph{
     display: flex;
 }
@@ -532,29 +598,6 @@ main p{
 
 .graph ul:nth-child(2){
     padding-left: 20px;
-}
-
-.switch{
-    display: none;
-    margin-left: 500px;
-}
-
-.for-switch-container{
-    padding: 0 30px;
-    height: 100%;
-    overflow: hidden;
-    transition: all 0.5s;
-}
-
-.switch:not(:checked)+.for-switch-container{
-    height: 0;
-    opacity: 0;
-    
-}
-
-.switch:checked+.for-switch-container{
-    height: 100%;
-    opacity: 1;
 }
 
 /*----------------- section.profile -----------------*/
@@ -582,13 +625,7 @@ main p{
 }
 
 .work-introduction .first-container h2{
-    text-align: center;
     border-bottom: 1px solid var(--tittle-font-color-);
-    width: 100%;
-    
-    margin-bottom: 50px;
-
-    font-size: 36px;
 }
 
 .work-introduction .content h3{
@@ -623,35 +660,6 @@ aside h4{
 
 .content p+iframe{
     margin: 50px 0;
-}
-
-.for-switch-container .for-switch-small-container{
-    transition: all 0.5s;
-}
-
-.for-switch-small-container iframe:nth-child(2){
-    margin-bottom: 100px;
-}
-
-.switch+.for-switch-small-container,.smallest-container,.appeal-page{
-    
-    overflow: hidden;
-}
-
-
-.switch:not(:checked)+.for-switch-small-container,.smallest-container,.appeal-page{
-    height: 0px;
-    opacity: 0;
-    
-}
-
-.switch:checked+.for-switch-small-container,.smallest-container,.appeal-page{
-    height: 100%;
-    opacity: 1;
-}
-
-.work-introduction .content{
-    margin-bottom: 50px;
 }
 
 .work-introduction a{
