@@ -170,6 +170,15 @@ i{
     padding-left: 10px;
 }
 
+@media(max-width:480px){
+    .text-font{
+        font-size: 12px;
+    }
+
+    .first-container h2{
+        font-size: 25px !important;
+    }
+}
 
 
 
@@ -213,6 +222,12 @@ i{
 
 .for-switch-small-container iframe:nth-child(2){
     margin-bottom: 100px;
+}
+
+@media(max-width:480px){
+    .for-switch-container{
+        padding: 0;
+    }
 }
 
 /*----------------- accordion block -----------------*/
@@ -323,6 +338,12 @@ i{
     left: -24px !important;   
     transition: .5s !important;
 }
+
+@media(max-width:480px){
+    #cursor-stalker,#cursor-stalker-2,#cursor-stalker-3{
+        display: none;
+    }
+}
 /*----------------- cursor-stalker -----------------*/
 
 
@@ -350,6 +371,18 @@ i{
 .work-introduction .content{
     margin-bottom: 50px;
 }
+
+@media(max-width:480px){
+    .first-container{
+        width: 90%;
+        padding: 50px 0 25px 0;
+    }
+
+    .content{
+        margin-bottom: 20px;
+    }
+}
+
 
 /*----------------- container-system -----------------*/
 
@@ -381,31 +414,31 @@ header h1{
     text-shadow: 5px 1px #00000056;
 }
 
-header .container{
+.fixed-container{
     position: fixed;
     z-index: 100;
     padding: 30px 0 0 30px;
 }
 
-header ul{
+.fixed-container ul{
     display: flex;
     flex-direction: column;
     margin-top: 20vh;
 }
 
-header li{
+.fixed-container li{
     flex: 1;
     display: inline-block;
     padding: 25px 0 25px 0;
 }
 
-header li a{
+.fixed-container li a{
     font-size: 20px;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.384);
     transition: 0.5s ease;
 }
 
-header li a:hover{
+.fixed-container li a:hover{
     display: inline-block;
 
     animation-name: shake;
@@ -413,6 +446,58 @@ header li a:hover{
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
+}
+
+@media(max-width:480px){
+    header h1{
+        width: 100%;
+        height: 20vh;
+        text-align: center;
+        font-size: 7vh;
+        position: absolute;
+        z-index: 2;
+        padding: 0;
+        margin-top: 5px;
+        text-shadow: 1px 1px #00000056;
+    }
+
+    .fixed-container{
+        bottom: 0;
+        left: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    header nav{
+        display: block;
+        width: 100%;
+    }
+
+    .fixed-container ul{
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
+    }
+
+    .fixed-container li{
+        background-color: rgba(255, 255, 255, 0.637);
+        flex: 1;
+        height: 15vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .fixed-container li:nth-child(2),.fixed-container li:nth-child(3),.fixed-container li:nth-child(4){
+        margin-left: 1px;
+    }
+    
+    .fixed-container li a{
+        font-size: 10px;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.384);
+        transition: 0.5s ease;
+    }
 }
 
 /*----------------- header -----------------*/
@@ -456,7 +541,7 @@ main{
     text-align: center;
 }
 
-main p{
+.main-message-container p{
     font-family: var(--text-font-family-);
     font-size: 40px;
     color: #ffeecb;
@@ -499,6 +584,43 @@ main p{
 
 .link-container nav li a:hover{
     background-color: #ffffff15;
+}
+
+@media(max-width:480px){
+
+    .link-container{
+        display: none;
+    }
+
+    main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-message-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 0 auto 0 auto;
+        position: static;
+        z-index: 0;
+        right: 0;
+        top: 0;
+    
+        width: 80%;
+        height: 50%;
+        text-align: center;
+    }
+
+    .main-message-container p{
+        font-family: var(--text-font-family-);
+        font-size: 20px;
+        color: #ffeecb;
+        text-shadow: 1px 1px #000000ad;
+        padding-top: 0px;
+    }
 }
 
 /*----------------- main -----------------*/
@@ -672,6 +794,7 @@ aside h4{
     opacity: 1;
 }
 
+
 /*----------------- section. work-introduction -----------------*/
 
 
@@ -696,6 +819,13 @@ aside h4{
     background-attachment: fixed;
 
     text-shadow: 0.5px 0.5px #00000033;
+}
+
+@media(max-width:480px){
+    .working-style h3{
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
 }
 
 /*----------------- section. working-style -----------------*/
@@ -748,4 +878,9 @@ aside h4{
     padding: 20px 0;
 }
 
+@media(max-width:480px){
+    .vision{
+        padding-bottom: 72px;
+    }
+}
 /*----------------- section. vision -----------------*/

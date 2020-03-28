@@ -115,3 +115,41 @@ function check_box_change(idname){
     // .checkedプロパティはチェックボックスの状態を示している
     obj.checked = !obj.checked;   // ここでは現状のチェックボックスの値(check or checked)に現状とは逆の値を入れている
 }
+
+
+
+var a = navigator.userAgent;
+
+ // userAgentの値の中に「iPhone」「iPad」「iPod」「Android」の文字列が入っているかをチェック
+ // indexOf("???") は指定した単語「???」の位置を調べる機能。0以上の値が出るとその???が入っている事になる。
+var ios = a.indexOf("iPhone")>0 || a.indexOf("iPad")>0 || a.indexOf("iPod")>0; 
+var android = a.indexOf("Andorid")>0;
+// 上の文字列が入っていればスマホであることが分かる
+
+
+if(ios == true || android == true){  // 「== true」判定になる場合は、数値が0以外、数値として扱える、文字列が空ではない、null以外、など
+    var instruction = document.getElementsByClassName('instruction');
+    for(var i=0; i<instruction.length; i++){
+        instruction[i].textContent='<< Tap !';
+    }
+}
+
+else{
+    var instruction = document.getElementsByClassName('instruction');
+    for(var i=0; i<instruction.length; i++){
+        instruction[i].textContent='<< click !';
+    }
+}
+
+
+
+
+window.getScreenSize();
+var ScrW = window.parent.screen.width;
+var ScrH = window.parent.screen.height;
+if(ScrW>480){
+    var instruction = document.getElementsByClassName('instruction');
+    for(var i=0; i<instruction.length; i++){
+        instruction[i].textContent='<< Tap !';
+    }
+}
