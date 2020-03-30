@@ -197,6 +197,7 @@ var scrollAnimationFunc = function() {
     if (-700 < SAelm[2].getBoundingClientRect().top) {
         SAelm[2].classList.add('show');
         SAelm[3].classList.add('show');
+        SAelm[4].classList.add('show');
 
     }
     

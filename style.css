@@ -211,6 +211,10 @@ i{
     transform: translate(0, 100px);
 }
 
+.scroll-animation--scaleUP {
+    transform: scale(.5);
+  }
+
 /*----------------- animation -----------------*/
 
 
@@ -621,8 +625,13 @@ main{
     color: #ffeecb;
     text-shadow: 2px 2px #000000ad;
 
-   
     padding-top: 20px;
+    transition-delay: 0.5s !important;
+}
+
+.main-message-container p.show{
+    opacity: 1 !important;
+    transform: none !important;
 }
 
 .link-container{
