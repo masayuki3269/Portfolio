@@ -39,7 +39,7 @@ for (var i = 0; i < linkElem.length; i++) {
         stalker_2.classList.add('hover-2');
         stalker_3.classList.add('hover-3');
 
-        //マウスストーカーの位置をリンクの中心に固定
+        // -----マウスストーカーの位置をリンクの中心に固定-----
         var rect = e.target.getBoundingClientRect(); 
         // e.target でクリックされた要素を取得
         // getBoundingClientRect()メソッドでリンクの座標(x,y)と横幅(w)・高さ(h)を取得
@@ -56,7 +56,7 @@ for (var i = 0; i < linkElem.length; i++) {
         stalker_3.style.transform = 'translate(' + posX_3 + 'px, ' + posY_3 + 'px)';
     });
 
-    //マウスホバー解除時
+    // -----マウスホバー解除時-----
     linkElem[i].addEventListener('mouseout', function (e) {
         hovFlag = false;
         stalker.classList.remove('hover');
@@ -166,4 +166,46 @@ window.addEventListener( "resize", function () {
 }) ;
 
 
+
+
+var triggerElm = document.getElementById('profile');
+var SAelm = document.getElementsByClassName('scroll-animation');
+
+var scrollAnimationFunc = function() {
+
+    var triggerMargin = 600;
+
+    // window.innerHeight = ブラウザウィンドウのコンテンツ領域の高さ
+    // 要素.getBoundingClientRect().top = 画面上端(top)から指定要素までの距離
+    if (window.innerHeight > triggerElm.getBoundingClientRect().top + triggerMargin) {
+        SAelm[1].classList.add('show');
+    }
+    
+    else{
+        SAelm[1].classList.remove('show');
+    }
+
+
+    if (-100 < SAelm[0].getBoundingClientRect().top) {
+        SAelm[0].classList.add('show');
+    }
+    
+    else{
+        SAelm[0].classList.remove('show');
+    }
+
+    if (-700 < SAelm[2].getBoundingClientRect().top) {
+        SAelm[2].classList.add('show');
+        SAelm[3].classList.add('show');
+
+    }
+    
+    else{
+        SAelm[3].classList.remove('show');
+    }
+}
+
+window.addEventListener('load', scrollAnimationFunc);
+window.addEventListener('scroll', scrollAnimationFunc);
+  
 

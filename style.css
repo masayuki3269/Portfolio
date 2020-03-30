@@ -170,6 +170,7 @@ i{
     padding-left: 10px;
 }
 
+
 @media(max-width:480px){
     .text-font{
         font-size: 12px;
@@ -187,6 +188,30 @@ i{
 }
 
 
+
+
+
+
+/*----------------- animation -----------------*/
+
+.scroll-animation{
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.scroll-animation--lr{
+    transform: translate(-100px, 0);
+}
+
+.scroll-animation--rotateR {
+    transform: rotate(-180deg);
+}
+
+.scroll-animation--up {
+    transform: translate(0, 100px);
+}
+
+/*----------------- animation -----------------*/
 
 
 
@@ -427,7 +452,15 @@ header h1{
     z-index: 2;
     padding: 30px 0 0 30px;
     text-shadow: 5px 1px #00000056;
+
+    transition-delay: 0.5s !important;
 }
+
+header h1.show{
+    opacity: 1 ;
+    transform: none ;
+}
+
 
 .fixed-container{
     position: fixed;
@@ -461,6 +494,16 @@ header h1{
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
+}
+
+header h1.show{
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+.fixed-container.show{
+    opacity: 1 !important;
+    transform: none !important;
 }
 
 @media(max-width:480px){
@@ -513,6 +556,15 @@ header h1{
         text-shadow: 1px 1px rgba(0, 0, 0, 0.384);
         transition: 0.5s ease;
     }
+
+    .fixed-container.scroll-animation{
+        opacity: 1;
+        transition: none;
+    }
+    
+    .fixed-container.scroll-animation--lr{
+        transform: none;
+    }
 }
 
 @media(min-width:480px) and (max-width:800px){
@@ -520,6 +572,7 @@ header h1{
         font-size: 15px;
     }
 }
+
 /*----------------- header -----------------*/
 
 
@@ -579,6 +632,8 @@ main{
     padding: 0 60px 0 60px;
 
     height: 40%;
+
+    transition-delay: 1s !important;
 }
 
 .link-container li{
@@ -608,16 +663,21 @@ main{
     background-color: #ffffff15;
 }
 
+.main-message-container.show{
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+
+main nav.show{
+    opacity: 1 !important;
+    transform: none !important;
+}
+
 @media(max-width:480px){
 
     .link-container{
         display: none;
-    }
-
-    main{
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
     .main-message-container{
