@@ -180,6 +180,12 @@ i{
     }
 }
 
+@media(max-width:800px){
+    .section-tittle::after{
+        content: "<< Tap !" !important
+    }
+}
+
 
 
 
@@ -427,12 +433,12 @@ header h1{
     position: fixed;
     z-index: 100;
     padding: 30px 0 0 30px;
+    margin-top: 20vh;
 }
 
 .fixed-container ul{
     display: flex;
     flex-direction: column;
-    margin-top: 20vh;
 }
 
 .fixed-container li{
@@ -491,7 +497,7 @@ header h1{
     .fixed-container li{
         background-color: rgba(255, 255, 255, 0.637);
         flex: 1;
-        height: 15vh;
+        height: 13vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -640,6 +646,16 @@ main{
         margin-top: 20px;
     }
 }
+
+@media(min-width:768px) and (max-width:1024px){
+    .main-message-container{
+        margin-top: 40px;
+    }
+
+    .main-message-container p{
+        padding-top: 80px;
+    }
+}
 /*----------------- main -----------------*/
 
 
@@ -684,7 +700,7 @@ main{
 
 
 
-.first-container h2::after{
+.section-tittle::after{
     content: "<< Click !";
     font-size: 0.5em;
     color: var(--tittle-font-color-);
