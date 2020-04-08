@@ -118,53 +118,30 @@ function check_box_change(idname){
 
 
 
-
+instruction_change();
 function instruction_change(){
-    getScreenSize();
-    function getScreenSize(){
-        var ScrW = window.parent.screen.width;
-        console.log(ScrW)
-        var BreakWidth = 800;
+    
+    var ScrW = window.parent.screen.width;
+    console.log(ScrW)
+    var BreakWidth = 800;
+    var instruction = document.getElementsByClassName('instruction');
 
-        if(ScrW<BreakWidth){
-            var instruction = document.getElementsByClassName('instruction');
-            for(var i=0; i<instruction.length; i++){
-                instruction[i].textContent='<< Tap !';
-            }
+    if(ScrW<BreakWidth){
+        for(var i=0; i<instruction.length; i++){
+            instruction[i].textContent='<< Tap !';
         }
+    }
 
-        else{
-            var instruction = document.getElementsByClassName('instruction');
-            for(var i=0; i<instruction.length; i++){
-                instruction[i].textContent='<< click !';
-            }
+    else{
+        for(var i=0; i<instruction.length; i++){
+            instruction[i].textContent='<< click !';
         }
     }
 }
 
 window.addEventListener( "resize", function () {
-    getScreenSize();
-    function getScreenSize(){
-        var ScrW = window.parent.screen.width;
-        console.log(ScrW)
-        var BreakWidth = 800;
-
-         if(ScrW<BreakWidth){
-            var instruction = document.getElementsByClassName('instruction');
-            for(var i=0; i<instruction.length; i++){
-                instruction[i].textContent='<< Tap !';
-            }
-        }
-
-        else{
-            var instruction = document.getElementsByClassName('instruction');
-            for(var i=0; i<instruction.length; i++){
-                instruction[i].textContent='<< click !';
-            }
-        }
-    }
+    instruction_change();
 }) ;
-
 
 
 
