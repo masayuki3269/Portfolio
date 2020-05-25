@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="robots" content="index,follow" />
+   <meta name="description" content="説明文" />
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+   <title>Document</title>
+
+   <link rel="shortcut icon" href=""> <!--👈ファビコン -->
+   <link rel="apple-touch-icon-precomposed" href="画像のパス/apple-touch-icon-precomposed.png"> <!--👈アプリのアイコン-->
+
+   <!-- 外部ファイルの読み込み -->
+   <link rel="stylesheet" href="">
+   <link rel="stylesheet" href="">
+   <script src="" crossorigin=""></script>
+   <script src=""></script>
+
+   <!-- スマホページのURLが異なる場合（PC側） -->
+   <link rel="alternate" media="only screen and (max-width: 640px)" href="スマホページのURL" />
+
+   <!-- スマホページのURLが異なる場合（スマホ側） -->
+   <link rel="canonical" href="PCページのURL" />
+
+   <!-- 必要あれば -->
+   <link rel="canonical" href="評価を統一したいページのURL" />
+
+   <!-- 分割ページの場合 -->
+   <link rel="prev" href="前のページのURL">
+   <link rel="next" href="次のページのURL">
+
+   <!-- facebookのOGPタグ -->
+   <meta property="og:site_name" content="LOGGER" />
+   <meta property="og:url" content="ページURL" />
+   <meta property="og:type" content="article" />
+   <meta property="og:title" content="サンプルTOP" />
+   <meta property="og:description" content="LOGGERのトップページです。"/>
+   <meta property="og:image" content="サムネイル画像URL" />
+   <meta property="fb:app_id" content="appIdを入力" />
+   <meta property="og:locale" content="ja_JP" />
+
+   <!-- twitterのOGPタグ -->
+   <meta name="twitter:card" content="カードの種類" />
+   <meta name="twitter:site" content="@ユーザー名" />
+   <meta name="twitter:description" content="ページ説明文" />
+   <meta name="twitter:image:src" content="サムネイル画像URL" />
+</head>
+<body>
+  <div>
+      <img id="main" src="img/cover.jpg" alt="">
+      <h1>Portfolio</h1>
+      <p>https://masayuki3269.github.io/Portfolio/</p>
+      <img id="qr" src="img/portfolio_QR.png" alt="">
+  </div>
+</body>
+<style>
+    body{
+        padding: 0;
+        background: linear-gradient(#ffe07a, #ff9901);
+        margin-top: 150px;
+    }
+
+    div{
+        text-align: center;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #main{
+        height: 200px;
+        width: 200px;
+        margin-top: 30px;
+        margin-right: 20px;
+    }
+
+    h1{
+        letter-spacing: 0.6em;
+        color: #fff;
+        margin: 100px 0 60px 40px;
+        padding: 0;
+        font-family: fantasy;
+        font-weight: 100;
+        font-size: 80px;
+    }
+    p{
+        letter-spacing: 0.2em;
+        color: #fff;
+        margin: 200px 0 40px 0;
+        padding: 0;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 400;
+        font-size: larger;
+    }
+    #qr{
+        width: 150px;
+        height: 150px;
+        margin-right: 10px;
+    }
+</style>
+</html>
